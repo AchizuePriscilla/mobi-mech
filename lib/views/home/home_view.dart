@@ -82,7 +82,7 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
                 iconData: Icons.history,
                 label: "History",
                 onPressed: () {
-                    Navigator.popAndPushNamed(context, historyViewRoute);
+                  Navigator.popAndPushNamed(context, historyViewRoute);
                 },
               ),
               const Spacer(),
@@ -226,64 +226,71 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
                                       );
                                     },
                                     itemBuilder: (context, index) {
-                                      return Container(
-                                        padding: EdgeInsets.symmetric(
-                                            horizontal: 10.w),
-                                        margin: EdgeInsets.only(
-                                            bottom: 7.h, top: 7.h),
-                                        child: Row(
-                                          children: [
-                                            CircleAvatar(
-                                              radius: 20.h,
-                                            ),
-                                            const CustomSpacer(
-                                              horizontal: true,
-                                            ),
-                                            Column(
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
-                                              children: [
-                                                Text(
-                                                  "Obi Onyeuwa",
-                                                  style: TextStyle(
-                                                    fontSize: 15.sp,
+                                      return InkWell(
+                                        onTap: () {
+                                          Navigator.pushNamed(
+                                              context, selectedMechanicViewRoute);
+                                        },
+                                        child: Container(
+                                          padding: EdgeInsets.symmetric(
+                                              horizontal: 10.w),
+                                          margin: EdgeInsets.only(
+                                              bottom: 7.h, top: 7.h),
+                                          child: Row(
+                                            children: [
+                                              CircleAvatar(
+                                                radius: 20.h,
+                                              ),
+                                              const CustomSpacer(
+                                                horizontal: true,
+                                              ),
+                                              Column(
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
+                                                children: [
+                                                  Text(
+                                                    "Obi Onyeuwa",
+                                                    style: TextStyle(
+                                                      fontSize: 15.sp,
+                                                    ),
                                                   ),
-                                                ),
-                                                Text(
-                                                  "data",
-                                                  style: TextStyle(
-                                                      fontSize: 13.sp,
-                                                      fontWeight:
-                                                          FontWeight.w500,
-                                                      color: Palette.grey),
-                                                ),
-                                                Text(
-                                                  "data",
-                                                  style: TextStyle(
-                                                      fontSize: 12.sp,
-                                                      fontWeight:
-                                                          FontWeight.w500,
-                                                      color: Palette.lightGrey),
-                                                )
-                                              ],
-                                            ),
-                                            const Spacer(),
-                                            IconButton(
+                                                  Text(
+                                                    "data",
+                                                    style: TextStyle(
+                                                        fontSize: 13.sp,
+                                                        fontWeight:
+                                                            FontWeight.w500,
+                                                        color: Palette.grey),
+                                                  ),
+                                                  Text(
+                                                    "data",
+                                                    style: TextStyle(
+                                                        fontSize: 12.sp,
+                                                        fontWeight:
+                                                            FontWeight.w500,
+                                                        color:
+                                                            Palette.lightGrey),
+                                                  )
+                                                ],
+                                              ),
+                                              const Spacer(),
+                                              IconButton(
+                                                  onPressed: () {},
+                                                  icon: Icon(
+                                                    Icons.star_outline_outlined,
+                                                    color: Palette.grey,
+                                                    size: 18.h,
+                                                  )),
+                                              IconButton(
                                                 onPressed: () {},
                                                 icon: Icon(
-                                                  Icons.star_outline_outlined,
+                                                  Icons.directions_outlined,
                                                   color: Palette.grey,
                                                   size: 18.h,
-                                                )),
-                                            IconButton(
-                                              onPressed: () {},
-                                              icon: Icon(
-                                                Icons.directions_outlined,
-                                                color: Palette.grey,
-                                                size: 18.h,
+                                                ),
                                               ),
-                                            ),
-                                          ],
+                                            ],
+                                          ),
                                         ),
                                       );
                                       // Container(

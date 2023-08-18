@@ -4,3 +4,4 @@ export 'login/login_view.dart';
 export 'home/home_view.dart';
 export 'favorite/favorite_view.dart';
 export 'history/history_view.dart';
+export 'selected_mechanic/selected_mechanic_view.dart';

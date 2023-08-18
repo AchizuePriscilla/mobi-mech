@@ -19,6 +19,8 @@ class RouteGenerator {
         return _getPageRoute(const FavoriteView());
       case historyViewRoute:
         return _getPageRoute(const HistoryView());
+      case selectedMechanicViewRoute:
+        return _getPageRoute(const SelectedMechanicView());
       default:
         return _getPageRoute(_errorPage());
     }
