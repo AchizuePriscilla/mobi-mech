@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:mobi_mech/shared/shared.dart';
 import 'package:mobi_mech/utils/constants.dart';
 
-class SignUpView extends StatelessWidget {
-  const SignUpView({super.key});
+class LoginView extends StatelessWidget {
+  const LoginView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +42,7 @@ class SignUpView extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Create a new account",
+                      "Sign into account",
                       style: TextStyle(
                           fontSize: 19.sp, fontWeight: FontWeight.w500),
                     ),
@@ -50,7 +50,7 @@ class SignUpView extends StatelessWidget {
                       flex: 1,
                     ),
                     Text(
-                      "Enter your details to create your account",
+                      "Enter your details to sign in to your account",
                       style: TextStyle(
                         fontSize: 14.sp,
                       ),
@@ -58,10 +58,6 @@ class SignUpView extends StatelessWidget {
                     const CustomSpacer(
                       flex: 8,
                     ),
-                    const CustomTextField(
-                      hint: "Full Name",
-                    ),
-                    const CustomSpacer(),
                     const CustomTextField(
                       hint: "Email",
                     ),
@@ -72,7 +68,7 @@ class SignUpView extends StatelessWidget {
                     const CustomSpacer(
                       flex: 4,
                     ),
-                    Button(text: "Sign Up", onPressed: () {}),
+                    Button(text: "Sign in", onPressed: () {}),
                     const CustomSpacer(
                       flex: 3,
                     ),
@@ -80,7 +76,7 @@ class SignUpView extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          "Already have an account?",
+                          "Don't have an account?",
                           style: TextStyle(fontSize: 14.sp),
                         ),
                         const CustomSpacer(
@@ -89,10 +85,10 @@ class SignUpView extends StatelessWidget {
                         ),
                         InkWell(
                           onTap: () {
-                            Navigator.popAndPushNamed(context, loginViewRoute);
+                            Navigator.popAndPushNamed(context, signUpViewRoute);
                           },
                           child: Text(
-                            "Sign In",
+                            "Sign up",
                             style: TextStyle(
                                 fontSize: 16.sp,
                                 fontWeight: FontWeight.w500,
