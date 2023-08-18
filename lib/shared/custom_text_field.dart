@@ -104,25 +104,25 @@ class CustomTextField extends StatelessWidget {
               hintStyle: hintStyle ??
                   TextStyle(
                       fontSize: 14.sp,
-                      color: hintColor ?? Palette.lightGrey,
+                      color: hintColor ?? Palette.grey.withOpacity(.5),
                       fontWeight: isBold ? FontWeight.w600 : FontWeight.w400),
               enabledBorder: OutlineInputBorder(
                 borderSide: const BorderSide(
                   color: Palette.lightGrey,
                 ),
-                borderRadius: BorderRadius.circular(30.w),
+                borderRadius: BorderRadius.circular(10.w),
               ),
               disabledBorder: OutlineInputBorder(
                 borderSide: const BorderSide(
                   color: Palette.lightGrey,
                 ),
-                borderRadius: BorderRadius.circular(30.w),
+                borderRadius: BorderRadius.circular(10.w),
               ),
               focusedBorder: OutlineInputBorder(
                 borderSide: const BorderSide(
                   color: Palette.lightGrey,
                 ),
-                borderRadius: BorderRadius.circular(30.w),
+                borderRadius: BorderRadius.circular(10.w),
               ),
               errorBorder: OutlineInputBorder(
                 borderSide: const BorderSide(

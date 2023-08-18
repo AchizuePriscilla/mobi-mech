@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:mobi_mech/shared/shared.dart';
+import 'package:mobi_mech/utils/constants.dart';
 
 class SplashScreenView extends StatelessWidget {
   const SplashScreenView({super.key});
@@ -30,7 +31,13 @@ class SplashScreenView extends StatelessWidget {
                   fontWeight: FontWeight.w600),
             ),
             const Spacer(),
-            Button(text: "Create new account", onPressed: () {}),
+            Button(
+                text: "Create new account",
+                color: Palette.white,
+                textColor: Palette.black,
+                onPressed: () {
+                  Navigator.popAndPushNamed(context, signUpViewRoute);
+                }),
             const CustomSpacer(
               flex: 3,
             ),

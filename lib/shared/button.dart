@@ -60,12 +60,12 @@ class Button extends StatelessWidget {
             style: TextStyle(
                 fontSize: halfSized ? 14.sp : 14.sp,
                 fontWeight: FontWeight.w400,
-                color: textColor ?? Palette.black),
+                color: textColor ?? Palette.white),
           );
     return TextButton(
       style: ButtonStyle(
         shape: MaterialStateProperty.all(
-            RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.w))),
         fixedSize: MaterialStateProperty.resolveWith((states) => size),
         minimumSize: halfSized ? dialogMinSize : minSize,
         foregroundColor: MaterialStateProperty.resolveWith(
@@ -74,7 +74,7 @@ class Button extends StatelessWidget {
         backgroundColor: outlined
             ? null
             : MaterialStateProperty.resolveWith(
-                (states) => color ?? (!active ? null : Palette.white),
+                (states) => color ?? (!active ? null : Palette.black),
               ),
         side: outlined
             ? MaterialStateProperty.resolveWith(
