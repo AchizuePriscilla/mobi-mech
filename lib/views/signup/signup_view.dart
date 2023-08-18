@@ -72,7 +72,11 @@ class SignUpView extends StatelessWidget {
                     const CustomSpacer(
                       flex: 4,
                     ),
-                    Button(text: "Sign Up", onPressed: () {}),
+                    Button(
+                        text: "Sign Up",
+                        onPressed: () {
+                          Navigator.popAndPushNamed(context, homeViewRoute);
+                        }),
                     const CustomSpacer(
                       flex: 3,
                     ),

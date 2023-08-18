@@ -13,6 +13,8 @@ class RouteGenerator {
         return _getPageRoute(const SignUpView());
       case loginViewRoute:
         return _getPageRoute(const LoginView());
+      case homeViewRoute:
+        return _getPageRoute(const HomeView());
       default:
         return _getPageRoute(_errorPage());
     }

@@ -5,7 +5,7 @@ class Palette {
   static const white = Color(0xffffffff);
   static const grey = Color(0xff757784);
   static const lightGrey = Color(0xffAFAFAF);
-  static const grey2 = Color(0xffAEB0C3);
+  static const grey2 = Color(0xffD1D1D1);
   static const blue = Color(0xff13329F);
   static const green = Color(0xff3FAD57);
   static const darkGreen = Color(0xff4F8000);

@@ -68,7 +68,11 @@ class LoginView extends StatelessWidget {
                     const CustomSpacer(
                       flex: 4,
                     ),
-                    Button(text: "Sign in", onPressed: () {}),
+                    Button(
+                        text: "Sign in",
+                        onPressed: () {
+                          Navigator.popAndPushNamed(context, homeViewRoute);
+                        }),
                     const CustomSpacer(
                       flex: 3,
                     ),
