@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:mobi_mech/shared/shared.dart';
+import 'package:mobi_mech/utils/constants.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -73,12 +74,16 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
               DrawerOptions(
                 iconData: Icons.star,
                 label: "Favorite Mechanics",
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.popAndPushNamed(context, favoriteViewRoute);
+                },
               ),
               DrawerOptions(
                 iconData: Icons.history,
                 label: "History",
-                onPressed: () {},
+                onPressed: () {
+                    Navigator.popAndPushNamed(context, historyViewRoute);
+                },
               ),
               const Spacer(),
               DrawerOptions(
