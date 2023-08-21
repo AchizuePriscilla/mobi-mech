@@ -104,7 +104,8 @@ class HomeVM extends BaseViewModel {
       LatLng currentLocation =
           const LatLng(6.868820929766292, 7.39536727941966);
       // Get the current user address
-      var res = await mapServices.reverseGeocodeUsingLatLng(currentLocation);
+      var res =
+          await googleMapServices.reverseGeocodeUsingLatLng(currentLocation);
       if (res.success) {
         String currentAddress = res.placeModel!.formattedAddress!;
 
@@ -157,7 +158,7 @@ class HomeVM extends BaseViewModel {
       String placeId, String sessiontoken) async {
     toggleFetchingMechanocs(true);
     try {
-      var res = await mapServices.getPlaceDetails(placeId, sessiontoken);
+      var res = await googleMapServices.getPlaceDetails(placeId, sessiontoken);
       print("latitude: ${res.placeModel!.latitude!}");
       await nearbySearchResults(
           res.placeModel!.latitude!, res.placeModel!.longitude!);

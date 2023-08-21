@@ -7,7 +7,7 @@ import 'package:mobi_mech/models/place_model.dart';
 import 'package:mobi_mech/utils/constants.dart';
 import 'package:mobi_mech/utils/parser_util.dart';
 
-abstract class MapRepository {
+abstract class GoogleMapRepository {
   Future<PlacesResponse> reverseGeocodeUsingLatLng(LatLng latLng);
   Future<GeneralResponse<List<PlaceModel>>> searchLocationsUsingQueryText(
       String query, sessiontoken);
@@ -15,8 +15,8 @@ abstract class MapRepository {
   Future<PlaceResponse> getPlaceDetails(String placeId, sessiontoken);
 }
 
-class MapRepositoryImpl extends BaseApi implements MapRepository {
-  MapRepositoryImpl(String baseApi) : super(baseApi);
+class GoogleMapRepositoryImpl extends BaseApi implements GoogleMapRepository {
+  GoogleMapRepositoryImpl(String baseApi) : super(baseApi);
   static String reverseGeocode = 'geocode/json?';
   static String searchByText = 'place/autocomplete/json?';
   static String nearbySearch = 'place/nearbysearch/json?';

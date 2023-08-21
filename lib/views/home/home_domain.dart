@@ -1,11 +1,12 @@
 import 'package:flutter/foundation.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:mobi_mech/data/remote/map_apis/map_service.dart';
+import 'package:mobi_mech/data/remote/google_map_apis/google_map_service.dart';
 import 'package:mobi_mech/models/place_model.dart';
 
 class HomeDomain {
-  late final MapServices _mapServices;
-  HomeDomain({required MapServices mapServices}) : _mapServices = mapServices;
+  late final GoogleMapServices _mapServices;
+  HomeDomain({required GoogleMapServices mapServices})
+      : _mapServices = mapServices;
   final ValueNotifier<bool> _fetchingMechanics = ValueNotifier(false);
   ValueNotifier<bool> get fetchingMechanics => _fetchingMechanics;
 
