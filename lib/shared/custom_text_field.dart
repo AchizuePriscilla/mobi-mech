@@ -10,6 +10,7 @@ class CustomTextField extends StatelessWidget {
   final Widget? suffix;
   final Widget? prefix;
   final Function(String)? validator;
+  final Function(String)? onChanged;
   final TextInputType? keyboardType;
   final TextStyle? hintStyle;
   final bool? centeredHint;
@@ -48,6 +49,7 @@ class CustomTextField extends StatelessWidget {
     this.borderColor,
     this.hintColor,
     this.textColor,
+    this.onChanged,
     this.isBold = false,
     this.maxLines,
     this.onTap,
@@ -79,6 +81,7 @@ class CustomTextField extends StatelessWidget {
             obscureText: obscureText,
             onTap: onTap,
             readOnly: readOnly,
+            onChanged: onChanged,
             minLines: expands ? null : 1,
             maxLines: expands ? null : 1,
             inputFormatters: formatters,

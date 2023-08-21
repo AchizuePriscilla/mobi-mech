@@ -1,6 +1,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.mobi_mech">
-   <application
+   
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-feature android:name="android.hardware.location.gps"/>
+    <uses-feature android:glEsVersion="0x00030001" android:required="true" />
+    <application
         android:label="mobi_mech"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
@@ -30,5 +38,7 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+        <meta-data android:name="com.google.android.geo.API_KEY"
+               android:value="AIzaSyDOidrCGitCm2VQmB61X-kXnb9IFKoTcnU"/>
     </application>
 </manifest>

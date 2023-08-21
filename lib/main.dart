@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mobi_mech/handlers/navigation_handler.dart';
 import 'package:mobi_mech/shared/shared.dart';
 import 'package:mobi_mech/utils/constants.dart';
+import 'package:mobi_mech/utils/env_config.dart';
 import 'package:mobi_mech/utils/locator.dart';
 import 'package:mobi_mech/utils/providers.dart';
 import 'package:mobi_mech/utils/route_generator.dart';
@@ -10,6 +11,7 @@ import 'package:provider/provider.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await setupLocator();
+  await loadEnvFile();
   runApp(const MyApp());
 }
 
@@ -32,7 +34,7 @@ class MyApp extends StatelessWidget {
                   ),
                   navigatorKey: locator<NavigationHandler>().navigatorKey,
                   onGenerateRoute: RouteGenerator.onGenerateRoute,
-                  initialRoute: splashScreenViewRoute,
+                  initialRoute: homeViewRoute,
                 );
               });
         });
